@@ -6,7 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class HomePage {
-    @FindBy(linkText ="Library")
+
+    @FindBy(xpath = "//a[@class='navbar-brand']")
     private WebElement pageTitleElement;
 
     public HomePage(){
