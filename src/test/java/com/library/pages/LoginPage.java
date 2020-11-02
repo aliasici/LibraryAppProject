@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 public class LoginPage {
 
     @FindBy(id = "inputEmail")
-    private WebElement usermailElement;
+    private WebElement useremailElement;
 
     @FindBy(id = "inputPassword")
     private WebElement passwordElement;
@@ -19,11 +19,12 @@ public class LoginPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    public void login(){
+    public void login() throws InterruptedException{
         String student_email = ConfigurationReader.getProperty("student_email");
         String student_password = ConfigurationReader.getProperty("student_password");
 
-        usermailElement.sendKeys(student_email);
+        useremailElement.sendKeys(student_email);
+        Thread.sleep(2000);
         passwordElement.sendKeys(student_password, Keys.ENTER);
     }
 
