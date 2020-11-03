@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class HomePage {
 
-    @FindBy(xpath = "//a[@class='navbar-brand']")
+    @FindBy(className = "navbar-brand")
     private WebElement pageTitleElement;
 
     public HomePage(){
